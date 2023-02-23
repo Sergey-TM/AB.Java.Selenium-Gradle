@@ -1,6 +1,5 @@
-package Smoke;
-
 import PageActions.WidgetsActions;
+import Settings.WebDriverSettings;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
