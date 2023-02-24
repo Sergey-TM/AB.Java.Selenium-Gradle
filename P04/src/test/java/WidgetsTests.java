@@ -13,7 +13,7 @@ public class WidgetsTests extends WebDriverSettings {
         //open Page
         widgetsActions.open();
         //sleep 3sec
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         //move slider
         widgetsActions.moveSlider();
         //verify selected value

@@ -10,11 +10,10 @@ import org.testng.annotations.Test;
 
 public class FormTests extends WebDriverSettings {
     @Test
-    public void test1() {
+    public void test1() throws InterruptedException {
         //pageFactory
         FormActions formActions = PageFactory.initElements(driver, FormActions.class);
         TabsActions tabsActions = PageFactory.initElements(driver, TabsActions.class);
-        //TableActions tableActions = PageFactory.initElements(driver, TableActions.class);
         //open Page
         formActions.open();
         //fill form with valid data
@@ -30,6 +29,7 @@ public class FormTests extends WebDriverSettings {
         //switch to modal
         tabsActions.switchtolastTab();
         //verify modal title
+        Thread.sleep(2000);
         Assert.assertEquals(formActions.getModalTitle(), "Thanks for submitting the form");
         //verify modal data
         TableActions tableActions = new TableActions(formActions.TableElement, driver);
