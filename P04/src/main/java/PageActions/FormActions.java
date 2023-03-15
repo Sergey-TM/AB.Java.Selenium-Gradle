@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class FormActions  {
@@ -38,7 +40,15 @@ public class FormActions  {
     @FindBy(xpath = "//div[@class='table-responsive']")
     public WebElement TableElement;
 
-    public String[] formData = {"First name", "Last name", "First name Last name","qa@i.ua","Male","1112223334" };
+    //public String[] formData = {"First name", "Last name", "First name Last name","qa@i.ua","Male","1112223334" };
+    public Map<String, String> formData = new HashMap<>(){{
+        put("1stName","First name");
+        put("2stName","Last name");
+        put("12_Name","First name Last name");
+        put("email","qa@i.ua");
+        put("gender","Male");
+        put("ph_number","1112223334");
+    }};
 
 
 
@@ -56,19 +66,18 @@ public class FormActions  {
 
 
     public void firstNameFieldSK() {
-        firstNameField.sendKeys(formData[0]);
-    }
+        firstNameField.sendKeys(formData.get("1stName"));}
     public void lastNameFieldSK() {
-        lastNameField.sendKeys(formData[1]);
+        lastNameField.sendKeys(formData.get("2stName"));
     }
     public void emailFieldSK() {
-        emailField.sendKeys(formData[3]);
+        emailField.sendKeys(formData.get("email"));
     }
     public void genderRadioBtnClick() {genderRadioBtn.click();}
     public void mobileFieldSK() {
-        mobileField.sendKeys(formData[5]);
+        mobileField.sendKeys(formData.get("ph_number"));
     }
-    public void stateFieldclick() { stateField.click();}
+    //public void stateFieldclick() { stateField.click();}
     public void submitBtnClick() { submitBtn.click();}
     public String getModalTitle() {  return modalTitle.getText(); }
 

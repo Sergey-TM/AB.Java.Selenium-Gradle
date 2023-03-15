@@ -12,10 +12,10 @@ import java.time.Duration;
 public class TabsActions  {
 
     @FindBy(xpath = "//button[@id='tabButton']")
-    public WebElement newtabBtn;
+    private WebElement newtabBtn;
 
     @FindBy(xpath = "//h1[@id='sampleHeading']")
-    public WebElement newtabtext;
+    private WebElement newtabtext;
 
 
 

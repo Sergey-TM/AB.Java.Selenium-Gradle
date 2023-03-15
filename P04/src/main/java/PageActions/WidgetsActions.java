@@ -11,10 +11,10 @@ public class WidgetsActions  {
 
 //Locators
     @FindBy(xpath = "//input[@type='range']")
-    public WebElement slider;
+    private WebElement slider;
 
     @FindBy(xpath = "//input[@id='sliderValue']")
-    public WebElement sliderValue;
+    private WebElement sliderValue;
 
 
 //Methods

@@ -29,13 +29,13 @@ public class FormTests extends WebDriverSettings {
         //switch to modal
         tabsActions.switchtolastTab();
         //verify modal title
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         Assert.assertEquals(formActions.getModalTitle(), "Thanks for submitting the form");
         //verify modal data
         TableActions tableActions = new TableActions(formActions.TableElement, driver);
-        Assert.assertEquals(tableActions.getValueFromCell(1,2), formActions.formData[2]);
-        Assert.assertEquals(tableActions.getValueFromCell(2,2), formActions.formData[3]);
-        Assert.assertEquals(tableActions.getValueFromCell(3,2), formActions.formData[4]);
-        Assert.assertEquals(tableActions.getValueFromCell(4,2), formActions.formData[5]);
+        Assert.assertEquals(tableActions.getValueFromCell(1,2), formActions.formData.get("12_Name"));
+        Assert.assertEquals(tableActions.getValueFromCell(2,2), formActions.formData.get("email"));
+        Assert.assertEquals(tableActions.getValueFromCell(3,2), formActions.formData.get("gender"));
+        Assert.assertEquals(tableActions.getValueFromCell(4,2), formActions.formData.get("ph_number"));
     }
 }
