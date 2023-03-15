@@ -14,28 +14,28 @@ import java.util.Map;
 public class FormActions  {
 
     @FindBy(xpath = "//input[@id='firstName']")
-    public WebElement firstNameField;
+    private WebElement firstNameField;
 
     @FindBy(xpath = "//input[@id='lastName']")
-    public WebElement lastNameField;
+    private WebElement lastNameField;
 
     @FindBy(xpath = "//input[@id='userEmail']")
-    public WebElement emailField;
+    private WebElement emailField;
 
     @FindBy(xpath = "//label[@for='gender-radio-1']")
-    public WebElement genderRadioBtn;
+    private WebElement genderRadioBtn;
 
     @FindBy(xpath = "//input[@id='userNumber']")
-    public WebElement mobileField;
+    private WebElement mobileField;
 
     @FindBy(xpath = "//div[@id='state']")
-    public WebElement stateField;
+    private WebElement stateField;
 
     @FindBy(xpath = "//button[@id='submit']")
-    public WebElement submitBtn;
+    private WebElement submitBtn;
 
     @FindBy(xpath = "//div[@id='example-modal-sizes-title-lg']")
-    public WebElement modalTitle;
+    private WebElement modalTitle;
 
     @FindBy(xpath = "//div[@class='table-responsive']")
     public WebElement TableElement;
